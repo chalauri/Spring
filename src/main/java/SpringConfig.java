@@ -22,7 +22,7 @@ import javax.sql.DataSource;
  */
 @Configuration
 @EnableWebMvc
-@ComponentScan(basePackages = {"ge.chalauri.*"})
+@ComponentScan(basePackages = {"ge.chalauri","ge.chalauri.*"})
 @EnableTransactionManagement
 @EnableScheduling
 public class SpringConfig extends WebMvcConfigurerAdapter {
@@ -47,8 +47,8 @@ public class SpringConfig extends WebMvcConfigurerAdapter {
 
         LocalContainerEntityManagerFactoryBean em = new LocalContainerEntityManagerFactoryBean();
         em.setDataSource(this.restDataSource());
-        em.setPackagesToScan("ge.gov.mia.academy");
-        em.setPersistenceUnitName("academy");
+        em.setPackagesToScan("ge.chalauri");
+        em.setPersistenceUnitName("chalauri");
 
         // TODO read from file
 

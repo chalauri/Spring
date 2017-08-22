@@ -1,5 +1,6 @@
 package ge.chalauri.model;
 
+
 import javax.persistence.*;
 import java.util.Date;
 
@@ -7,8 +8,8 @@ import java.util.Date;
  * Created by Chalauri-G on 6/20/2017.
  */
 
-@Entity(name = "jpa_hibernate_example.EmployeeBonus")
-@Table(name = "EMPLOYEE_BONUSES")
+@Entity(name = "ge.chalauri.model.EmployeeBonus")
+@Table(name = "employee_bonuses")
 public class EmployeeBonus {
 
     @Id
