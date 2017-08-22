@@ -1,0 +1,26 @@
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	id="eflow-reports" version="3.0">
+	<display-name>spring-jpa</display-name>
+	<session-config>
+		<session-timeout>30</session-timeout>
+	</session-config>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+
+<!-- 	<filter> -->
+<!-- 		<filter-name>CorsFilter</filter-name> -->
+<!-- 		<filter-class>ge.gov.mia.academy.security.CorsFilter</filter-class> -->
+<!-- 	</filter> -->
+<!-- 	<filter-mapping> -->
+<!-- 		<filter-name>CorsFilter</filter-name> -->
+<!-- 		<url-pattern>/*</url-pattern> -->
+<!-- 	</filter-mapping> -->
+
+<!-- 	<filter-mapping> -->
+<!-- 		<filter-name>SessionFilter</filter-name> -->
+<!-- 		<url-pattern>/restapi/*</url-pattern> -->
+<!-- 	</filter-mapping> -->
+</web-app>
