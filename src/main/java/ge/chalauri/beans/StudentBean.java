@@ -19,7 +19,7 @@ import static com.querydsl.jpa.JPAExpressions.*;
 public class StudentBean {
 
 
-    @PersistenceContext
+    @PersistenceContext(unitName = "chalauri")
     private EntityManager em;
 
     public List<StudentGrade> getSubjectWithMaxGrade() {

@@ -1,7 +1,13 @@
+import ge.chalauri.repositories.PersonJpaRepository;
+import org.hibernate.jpa.HibernatePersistenceProvider;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.boot.orm.jpa.EntityScan;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+import org.springframework.data.web.config.EnableSpringDataWebSupport;
 import org.springframework.http.MediaType;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.orm.jpa.JpaTransactionManager;
@@ -23,10 +29,11 @@ import javax.sql.DataSource;
  */
 @Configuration
 @EnableWebMvc
-@EnableJpaRepositories(basePackageClasses = SpringConfig.class, basePackages = {"ge.chalauri.repositories"})
-@ComponentScan(basePackages = {"ge.chalauri.controller", "ge.chalauri.beans", "ge.chalauri.entities"})
+@ComponentScan(basePackages = {"ge.chalauri.*"})
 @EnableTransactionManagement
 @EnableScheduling
+@EnableSpringDataWebSupport
+@EnableJpaRepositories(basePackages = {"ge.chalauri.repositories"}, entityManagerFactoryRef = "entityManagerFactoryBean")
 public class SpringConfig extends WebMvcConfigurerAdapter {
 
 
@@ -49,7 +56,7 @@ public class SpringConfig extends WebMvcConfigurerAdapter {
 
         LocalContainerEntityManagerFactoryBean em = new LocalContainerEntityManagerFactoryBean();
         em.setDataSource(this.restDataSource());
-        em.setPackagesToScan("ge.chalauri");
+        em.setPackagesToScan("ge.chalauri.entities");
         em.setPersistenceUnitName("chalauri");
 
         // TODO read from file

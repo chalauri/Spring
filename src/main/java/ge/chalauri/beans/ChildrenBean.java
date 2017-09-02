@@ -20,7 +20,6 @@ import java.time.Month;
 import java.util.List;
 import java.util.Random;
 
-import static com.querydsl.jpa.JPAExpressions.*;
 
 /**
  * Created by Chalauri-G on 8/22/2017.
@@ -29,7 +28,7 @@ import static com.querydsl.jpa.JPAExpressions.*;
 @Component
 public class ChildrenBean {
 
-    @PersistenceContext
+    @PersistenceContext(unitName = "chalauri")
     private EntityManager em;
 
     private Month[] months = {Month.JANUARY, Month.FEBRUARY, Month.MARCH, Month.APRIL, Month.MAY,

@@ -16,7 +16,7 @@ import java.util.List;
 @Repository
 public class PersonBean {
 
-    @PersistenceContext
+    @PersistenceContext(unitName = "chalauri")
     private EntityManager em;
 
     public List<Person> getAllPersons() {

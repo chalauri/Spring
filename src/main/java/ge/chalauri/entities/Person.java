@@ -4,7 +4,6 @@ package ge.chalauri.entities;
 import org.hibernate.annotations.Formula;
 
 import javax.persistence.*;
-import java.util.List;
 
 
 @Entity(name = "ge.chalauri.entities.Persons")
