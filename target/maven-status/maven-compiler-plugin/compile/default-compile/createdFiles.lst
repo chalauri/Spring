@@ -1,5 +1,6 @@
 ge\chalauri\beans\ChildrenBean.class
 ge\chalauri\beans\PersonBean.class
+ge\chalauri\beans\PersonService.class
 ge\chalauri\entities\QPhoneNumber.class
 ge\chalauri\entities\StudentGrade.class
 ge\chalauri\controller\ChildrenController.class
@@ -7,6 +8,7 @@ ge\chalauri\utils\LocalDateAttributeConverter.class
 ge\chalauri\entities\Child.class
 SpringConfig.class
 ge\chalauri\entities\QStudentGrade.class
+ge\chalauri\repositories\PersonJpaRepository.class
 ge\chalauri\controller\PersonController.class
 ge\chalauri\entities\PhoneNumber.class
 ge\chalauri\controller\StudentController.class

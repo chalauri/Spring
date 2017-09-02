@@ -1,6 +1,7 @@
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.http.MediaType;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.orm.jpa.JpaTransactionManager;
@@ -22,7 +23,8 @@ import javax.sql.DataSource;
  */
 @Configuration
 @EnableWebMvc
-@ComponentScan(basePackages = {"ge.chalauri","ge.chalauri.*"})
+@EnableJpaRepositories(basePackageClasses = SpringConfig.class, basePackages = {"ge.chalauri.repositories"})
+@ComponentScan(basePackages = {"ge.chalauri.controller", "ge.chalauri.beans", "ge.chalauri.entities"})
 @EnableTransactionManagement
 @EnableScheduling
 public class SpringConfig extends WebMvcConfigurerAdapter {
